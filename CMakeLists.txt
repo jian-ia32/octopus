@@ -3,7 +3,8 @@ project(dmfs)
 
 # Compiler options
 set (CMAKE_C_FLAGS "-Wall -Wno-deprecated-declarations -Wsign-compare")
-set (CMAKE_CXX_FLAGS "-g ${CMAKE_C_FLAGS} -std=c++11 -Wall -O0 -DTHREAD -D_FILE_OFFSET_BITS=64 -libverbs -lfuse")
+set (CMAKE_CXX_FLAGS "-g ${CMAKE_C_FLAGS} -std=c++11 -Wall -O0 -DTHREAD -D_FILE_OFFSET_BITS=64")
+set (CMAKE_DL_LIBS "-lfuse -libverbs")
 
 option (SANITIZE "Turn on sanitization" OFF)
 if (SANITIZE)
